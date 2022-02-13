@@ -20,14 +20,14 @@ struct Home: View {
             Text("SHO")
                     .font(.system(size: 50, weight: .bold))
                     .foregroundColor(Color("dark"))
-                    .frame(width: 130, height: 750, alignment: .topTrailing)
+                    .frame(width: 130, height: 780, alignment: .topTrailing)
                     .padding(.horizontal, 10)
 
                 
             Text("KU")
                     .font(.system(size: 50, weight: .bold))
                     .foregroundColor(Color("orange"))
-                    .frame(width: 130, height: 750, alignment: .topLeading)
+                    .frame(width: 130, height: 780, alignment: .topLeading)
                     .padding(.horizontal, -20)
             }
             
@@ -40,7 +40,7 @@ struct Home: View {
                 .fontWeight(.bold)
                 .foregroundColor(Color("dark"))
             //Letter Spacing...
-                .kerning(1.9)
+                .kerning(2.0)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             //Email and Password...
@@ -104,7 +104,7 @@ struct Home: View {
                 .padding(.top,10)
         }
             .padding()
-            .padding(.top, -6)
+            .padding(.top, -35)
         }
         .frame(height: 400, alignment: .topTrailing)
         
