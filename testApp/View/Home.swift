@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct Home: View {
-    @State var email = ""
-    @State var password = ""
+   
+    @State var showSignUp = false
     
     
     //This stuff is for the commitho
@@ -31,85 +31,56 @@ struct Home: View {
                     .padding(.horizontal, -25)
             }
             
-        VStack{
-            //.frame(maxHeight: getRect().width)
-            VStack{
-            
-            Text("Sign In")
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(Color("dark"))
-            //Letter Spacing...
-                .kerning(2.0)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            
-            //Email and Password...
-            VStack(alignment: .leading, spacing: 8, content: {
+            ZStack{
+                if showSignUp{
+                    SignUp()
+                        .transition(.move(edge: .trailing))
+                }
+                else{
+                    Login()
+                        .transition(.move(edge: .trailing))
+                }
                 
-                Text("User Name")
-                    .fontWeight(.bold)
-                    .foregroundColor(.gray)
-                
-                TextField("iampratham@gmail.com", text: $email)
-                //Increasing font size and text color
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(Color("dark"))
-                    .padding(.top,5)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                
-                Divider()
-            })
-                .padding(.top,25)
-            
-            VStack(alignment: .leading, spacing: 8, content: {
-                
-                Text("Password")
-                    .fontWeight(.bold)
-                    .foregroundColor(.gray)
-                
-                SecureField("******", text: $password)
-                //Increasing font size and text color
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(Color("dark"))
-                    .padding(.top,5)
-                    .autocapitalization(.none)
-                
-                Divider()
-            })
-                .padding(.top,20)
-            
-            //Forget Password...
-            Button(action: {}, label: {
-                Text("Forgot Password?")
-                    .fontWeight(.bold)
-                    .foregroundColor(.gray)
-            })
-            
-            //Reduce hstack and spacers
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .padding(.top,10)
-            
-            Button(action: {}, label: {
-                Image(systemName: "arrow.right")
-                    .font(.system(size: 24, weight: .bold))
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color("dark"))
-                    .clipShape(Circle())
-                //Shadow
-                    .shadow(color: Color("orange").opacity(0.4), radius: 5, x: 0, y: 0)
-            })
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.top,10)
-        }
-            .padding()
-            .padding(.top, -6)
-        }
-        .frame(height: 500, alignment: .topTrailing)
+            }
+        
+        .frame(maxHeight: 500, alignment: .topTrailing)
         
     }
+        .overlay(
         
+            HStack{
+                
+                Text(showSignUp ? "Already Member?" : "New Member?")
+                    .fontWeight(.bold)
+                    .foregroundColor(.gray)
+                
+                Button(action: {
+                    withAnimation{
+                        showSignUp.toggle()
+                    }
+                }, label: {
+                    Text(showSignUp ? "Sign In" : "Sign Up")
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("orange"))
+                })
+            }
+                .padding(.bottom,getSafeArea().bottom == 0 ? 15 : 0)
+                ,alignment: .bottom
+        )
+        .background(
+            
+            HStack{
+                
+                Text("By creating an account, you agree to our terms of service")
+                    .font(.system(size: 12, weight: .bold))
+                    .foregroundColor(.gray)
+                    .frame(alignment: .center)
+                    
+            }
+                .offset(y: getSafeArea().bottom)
+            
+            ,alignment: .bottom
+        )
         
     }
     
@@ -118,6 +89,18 @@ struct Home: View {
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+    }
+}
+
+extension View{
+    
+    func getRect()->CGRect{
+        return UIScreen.main.bounds
+    }
+    
+    func getSafeArea()->UIEdgeInsets{
+        return UIApplication.shared.windows.first?.safeAreaInsets
+        ?? UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 }
 
