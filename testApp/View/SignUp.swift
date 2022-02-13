@@ -11,6 +11,7 @@ struct SignUp: View {
     @State var email = ""
     @State var password = ""
     @State var confirmPassword = ""
+    @State var userName = ""
     
     var body: some View {
         VStack{
@@ -50,7 +51,7 @@ struct SignUp: View {
                         .font(.system(size: 15, weight: .bold))
                         .foregroundColor(.gray)
                     
-                    TextField("amoghtheboss45", text: $email)
+                    TextField("amoghtheboss45", text: $userName)
                     //Increasing font size and text color
                         .font(.system(size: 15, weight: .semibold))
                         .foregroundColor(Color("dark"))
