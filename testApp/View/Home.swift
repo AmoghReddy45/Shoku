@@ -21,14 +21,14 @@ struct Home: View {
                     .font(.system(size: 50, weight: .bold))
                     .foregroundColor(Color("dark"))
                     .frame(width: 130, height: 780, alignment: .topTrailing)
-                    .padding(.horizontal, 10)
+                    .padding(.horizontal, 15)
 
                 
             Text("KU")
                     .font(.system(size: 50, weight: .bold))
                     .foregroundColor(Color("orange"))
                     .frame(width: 130, height: 780, alignment: .topLeading)
-                    .padding(.horizontal, -20)
+                    .padding(.horizontal, -25)
             }
             
         VStack{
@@ -104,9 +104,9 @@ struct Home: View {
                 .padding(.top,10)
         }
             .padding()
-            .padding(.top, -35)
+            .padding(.top, -6)
         }
-        .frame(height: 400, alignment: .topTrailing)
+        .frame(height: 500, alignment: .topTrailing)
         
     }
         
