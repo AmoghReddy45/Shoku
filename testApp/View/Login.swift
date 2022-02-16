@@ -27,7 +27,7 @@ struct Login: View {
             //Email and Password...
             VStack(alignment: .leading, spacing: 8, content: {
                 
-                Text("USERNAME")
+                Text("USERNAME / EMAIL")
                     .font(.system(size: 15, weight: .bold))
                     .foregroundColor(.gray)
                 

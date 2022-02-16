@@ -20,16 +20,17 @@ struct Home: View {
             Text("SHO")
                     .font(.system(size: 50, weight: .bold))
                     .foregroundColor(Color("dark"))
-                    .frame(width: 130, height: 780, alignment: .topTrailing)
-                    .padding(.horizontal, 15)
-
+                    .frame(maxHeight: 780, alignment: .top)
+                    .padding(.trailing, -4)
+ 
                 
             Text("KU")
                     .font(.system(size: 50, weight: .bold))
                     .foregroundColor(Color("orange"))
-                    .frame(width: 130, height: 780, alignment: .topLeading)
-                    .padding(.horizontal, -25)
+                    .frame(maxHeight: 780, alignment: .top)
+                    .padding(.leading, -4)
             }
+            .frame(alignment: .center)
             
             ZStack{
                 if showSignUp{
@@ -64,20 +65,26 @@ struct Home: View {
                         .foregroundColor(Color("orange"))
                 })
             }
-                .padding(.bottom,getSafeArea().bottom == 0 ? 15 : 0)
+                .padding(.bottom,getSafeArea().bottom == 0 ? 30 : 0)
                 ,alignment: .bottom
         )
         .background(
             
-            HStack{
+            VStack{
                 
-                Text("By creating an account, you agree to our terms of service")
+                Text("By creating an account, you agree to \n")
                     .font(.system(size: 12, weight: .bold))
                     .foregroundColor(.gray)
                     .frame(alignment: .center)
+                    //.padding(.top,)
+                Text("our terms of service")
+                    .font(.system(size: 12, weight: .bold))
+                    .foregroundColor(.gray)
+                    .frame(alignment: .center)
+                    .padding(.top,-25)
                     
             }
-                .offset(y: getSafeArea().bottom)
+                .offset(y: (getSafeArea().bottom) + 10)
             
             ,alignment: .bottom
         )
