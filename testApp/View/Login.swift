@@ -10,11 +10,14 @@ import SwiftUI
 struct Login: View {
     @State var email = ""
     @State var password = ""
+    @State var showForgotPassword = true
     
     var body: some View {
         VStack{
             //.frame(maxHeight: getRect().width)
+            
             VStack{
+                
             
             Text("Sign In")
                 .font(.title)
@@ -61,7 +64,8 @@ struct Login: View {
                 .padding(.top,20)
             
             //Forget Password...
-            Button(action: {}, label: {
+            Button(action: {
+            }, label: {
                 Text("Forgot Password?")
                     .font(.system(size: 15, weight: .bold))
                     .foregroundColor(.gray)

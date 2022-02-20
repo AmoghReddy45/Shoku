@@ -12,6 +12,7 @@ struct Home: View {
     @State var showSignUp = false
     
     
+    
     //This stuff is for the commitho
     
     var body: some View {

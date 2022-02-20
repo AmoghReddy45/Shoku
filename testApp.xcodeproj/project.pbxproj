@@ -17,6 +17,8 @@
 		F18607D327B75BD70049E2CA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18607D227B75BD70049E2CA /* Home.swift */; };
 		F1C3CC1727B8DDC0005B7A66 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3CC1627B8DDBF005B7A66 /* Login.swift */; };
 		F1C3CC1927B8DDCB005B7A66 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3CC1827B8DDCB005B7A66 /* SignUp.swift */; };
+		F1C3CC1B27BEE17B005B7A66 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3CC1A27BEE17B005B7A66 /* Main.swift */; };
+		F1C3CC1D27BEE35C005B7A66 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3CC1C27BEE35C005B7A66 /* ForgotPassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		F18607D227B75BD70049E2CA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		F1C3CC1627B8DDBF005B7A66 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		F1C3CC1827B8DDCB005B7A66 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		F1C3CC1A27BEE17B005B7A66 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		F1C3CC1C27BEE35C005B7A66 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,8 @@
 				F18607D227B75BD70049E2CA /* Home.swift */,
 				F1C3CC1627B8DDBF005B7A66 /* Login.swift */,
 				F1C3CC1827B8DDCB005B7A66 /* SignUp.swift */,
+				F1C3CC1A27BEE17B005B7A66 /* Main.swift */,
+				F1C3CC1C27BEE35C005B7A66 /* ForgotPassword.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,9 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C3CC1B27BEE17B005B7A66 /* Main.swift in Sources */,
 				F18607AA27B726480049E2CA /* ContentView.swift in Sources */,
 				F18607D327B75BD70049E2CA /* Home.swift in Sources */,
 				F18607A827B726480049E2CA /* testAppApp.swift in Sources */,
+				F1C3CC1D27BEE35C005B7A66 /* ForgotPassword.swift in Sources */,
 				F1C3CC1727B8DDC0005B7A66 /* Login.swift in Sources */,
 				F1C3CC1927B8DDCB005B7A66 /* SignUp.swift in Sources */,
 			);
