@@ -7,6 +7,7 @@ struct homePage: View {
     var body: some View {
         VStack{
         
+            //Categories Title
             VStack
             {
                 Text("Categories: ")
@@ -15,60 +16,28 @@ struct homePage: View {
                     .font(.system(size: 50, weight: .bold))
                     .padding()
             }
-            HStack(alignment: .top, content:
+            ScrollView
+            {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 170), spacing: 0)], spacing: 30)
                 {
-                    Button(action: {}, label: {
-                        RoundedRectangle(cornerRadius: 25, style: .continuous)
-                            .fill(Color.orange)
-                            .frame(width: 170, height: 170,
-                                   alignment: .leading)
-                            .padding()
-                    }).frame(
-                        alignment:
-                                    .topLeading)
-                    Button(action: {}, label: {
-                        RoundedRectangle(cornerRadius: 25, style: .continuous)
-                            .fill(Color.orange)
-                            .frame(width: 170, height: 170,
-                                   alignment: .leading)
-                            .padding()
-                    }).frame(
-                                    alignment:
-                                    .topTrailing)
-                    
-                })
-            HStack(alignment: .top, content:
-                {
-                    Button(action: {}, label: {
-                        RoundedRectangle(cornerRadius: 25, style: .continuous)
-                            .fill(Color.orange)
-                            .frame(width: 170, height: 170,
-                                   alignment: .leading)
-                            .padding()
-                    }).frame(
-                        alignment:
-                                    .topLeading)
-                    Button(action: {}, label: {
-                        RoundedRectangle(cornerRadius: 25, style: .continuous)
-                            .fill(Color.orange)
-                            .frame(width: 170, height: 170,
-                                   alignment: .leading)
-                            .padding()
-                    }).frame(
-                        maxHeight: .infinity,
-                                    alignment:
-                                    .topTrailing)
-                    
-                })        }
-
+                    ForEach(0..<10)
+                    { index in
+                        Card(text: "Card# \(index)")
+                    }
+                }.padding()
+            }
+        }
     }
+}
+    
+    
     
     struct HomePage: PreviewProvider {
         static var previews: some View {
             homePage()
         }
     }
-}
+
 
 
 
