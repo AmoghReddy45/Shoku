@@ -4,7 +4,15 @@ import SwiftUI
 
 struct homePage: View {
     
+    @State private var searchText = ""
     var body: some View {
+        
+        NavigationView {
+            Text("Searching for \(searchText)")
+                .searchable(text: $searchText)
+                .navigationTitle("Searchable Example")
+            }
+        
         VStack{
         
             //Categories Title
