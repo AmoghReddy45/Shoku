@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		384F644327CB68F100EA443E /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384F644227CB68F100EA443E /* HomePage.swift */; };
+		384F644927CB950700EA443E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384F644827CB950700EA443E /* Card.swift */; };
 		F18607A827B726480049E2CA /* testAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18607A727B726480049E2CA /* testAppApp.swift */; };
 		F18607AA27B726480049E2CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18607A927B726480049E2CA /* ContentView.swift */; };
 		F18607AC27B726490049E2CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F18607AB27B726490049E2CA /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		384F644227CB68F100EA443E /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		384F644827CB950700EA443E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		F18607A427B726480049E2CA /* testApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F18607A727B726480049E2CA /* testAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testAppApp.swift; sourceTree = "<group>"; };
 		F18607A927B726480049E2CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 				F18607A927B726480049E2CA /* ContentView.swift */,
 				F18607AB27B726490049E2CA /* Assets.xcassets */,
 				F18607AD27B726490049E2CA /* Preview Content */,
+				384F644827CB950700EA443E /* Card.swift */,
 			);
 			path = testApp;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				F18607D227B75BD70049E2CA /* Home.swift */,
+				384F644227CB68F100EA443E /* HomePage.swift */,
 				F1C3CC1627B8DDBF005B7A66 /* Login.swift */,
 				F1C3CC1827B8DDCB005B7A66 /* SignUp.swift */,
 				F1C3CC1A27BEE17B005B7A66 /* Main.swift */,
@@ -283,7 +289,10 @@
 				F1C3CC1B27BEE17B005B7A66 /* Main.swift in Sources */,
 				F18607AA27B726480049E2CA /* ContentView.swift in Sources */,
 				F18607D327B75BD70049E2CA /* Home.swift in Sources */,
+				384F644927CB950700EA443E /* Card.swift in Sources */,
 				F18607A827B726480049E2CA /* testAppApp.swift in Sources */,
+
+				384F644327CB68F100EA443E /* HomePage.swift in Sources */,
 				F1C3CC1D27BEE35C005B7A66 /* ForgotPassword.swift in Sources */,
 				F1C3CC1727B8DDC0005B7A66 /* Login.swift in Sources */,
 				F1C3CC1927B8DDCB005B7A66 /* SignUp.swift in Sources */,
